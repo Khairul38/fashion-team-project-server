@@ -18,7 +18,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 async function run() {
     try {
         await client.connect();
-        const database = client.db('niche');
+        const database = client.db('fashion');
         const productCollection = database.collection('products')
         const userCollection = database.collection('users');
         const orderCollection = database.collection('orders');
@@ -142,7 +142,7 @@ run().catch(console.dir);
 
 
 app.get('/', (req, res) => {
-    res.send('Hello Niche-Website!')
+    res.send('Hello Fashion-Website!')
 })
 
 app.listen(port, () => {
